@@ -4,15 +4,18 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
   background: #000;
   color: #fff;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 a {
   color: #00aaff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #00ddff;
 }
 
 /* 헤더 */
@@ -28,7 +31,8 @@ header {
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 nav ul {
@@ -49,6 +53,7 @@ nav ul li a {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background: #000;
 }
 
 canvas#heroCanvas {
@@ -69,12 +74,13 @@ canvas#heroCanvas {
 }
 
 .hero-text h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #ccc;
 }
 
@@ -85,32 +91,28 @@ section {
   margin: 0 auto;
 }
 
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
 /* About */
 #about {
   background-color: #111;
   text-align: center;
 }
 
-#about h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
 #about p {
   color: #ccc;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Projects */
 #projects {
   background-color: #000;
-}
-
-#projects h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
 }
 
 .project-grid {
@@ -121,33 +123,32 @@ section {
 
 .project-card {
   background-color: #1a1a1a;
-  padding: 1.5rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.3);
 }
 
 .project-card h3 {
   margin-bottom: 0.5rem;
   color: #fff;
+  font-size: 1.4rem;
 }
 
 .project-card p {
   color: #aaa;
+  font-size: 1rem;
 }
 
 /* Contact */
 #contact {
   background-color: #111;
   text-align: center;
-}
-
-#contact h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
 }
 
 #contact form {
@@ -160,25 +161,28 @@ section {
 
 #contact input,
 #contact textarea {
-  padding: 0.8rem;
+  padding: 1rem;
   border: none;
   border-radius: 8px;
   background-color: #1f1f1f;
   color: #fff;
+  font-size: 1rem;
 }
 
 #contact button {
-  background-color: #333;
+  background-color: #00aaff;
   color: #fff;
   border: none;
-  padding: 0.8rem;
+  padding: 0.9rem;
+  font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 #contact button:hover {
-  background-color: #555;
+  background-color: #00ddff;
+  transform: translateY(-2px);
 }
 
 /* Footer */
