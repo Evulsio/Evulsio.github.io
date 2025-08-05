@@ -14,7 +14,7 @@ const projectsData = {
         "videoUrl": "https://www.youtube.com/embed/264Wfi25UOU",
         "collaboration_details": {
             "team_size": 5,
-            "my_role": "Game Director & Gameplay Programmer",
+            "my_role": "Gameplay Programmer", "VFX Designer"
             "team_roles": [
                 "Game Director & Gameplay Programmer (Me)",
                 "3D Artist & Animator",
