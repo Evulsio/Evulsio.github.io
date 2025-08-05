@@ -193,3 +193,17 @@ footer {
   color: #666;
   font-size: 0.9rem;
 }
+.contact-links {
+  margin-top: 2rem;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.contact-links a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
