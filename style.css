@@ -1,11 +1,91 @@
-/* 공통 섹션 스타일 */
+/* 기본 세팅 */
+body {
+  margin: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #111;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  font-weight: bold;
+}
+
+/* Hero 섹션 */
+#hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+canvas#heroCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* 공통 섹션 */
 section {
   padding: 6rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* 소개 섹션 */
+/* About */
 #about {
   background-color: #111;
   text-align: center;
@@ -13,18 +93,24 @@ section {
 
 #about h2 {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 #about p {
+  color: #ccc;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #ccc;
 }
 
-/* 프로젝트 섹션 */
+/* Projects */
 #projects {
   background-color: #000;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .project-grid {
@@ -36,8 +122,7 @@ section {
 .project-card {
   background-color: #1a1a1a;
   padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -52,10 +137,9 @@ section {
 
 .project-card p {
   color: #aaa;
-  font-size: 0.95rem;
 }
 
-/* 연락처 섹션 */
+/* Contact */
 #contact {
   background-color: #111;
   text-align: center;
@@ -81,7 +165,6 @@ section {
   border-radius: 8px;
   background-color: #1f1f1f;
   color: #fff;
-  resize: none;
 }
 
 #contact button {
@@ -98,7 +181,7 @@ section {
   background-color: #555;
 }
 
-/* 푸터 */
+/* Footer */
 footer {
   background-color: #000;
   text-align: center;
