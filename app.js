@@ -644,7 +644,7 @@ function initializeTypingEffect() {
 
     if (!typingText || !typingCursor) return;
 
-    const text = "Cho Sanghyeon";
+    const text = "Bang SungHyeon";
     let i = 0;
 
     function typeWriter() {
