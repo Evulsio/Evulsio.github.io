@@ -10,7 +10,7 @@ const projectsData = {
         "team_size": 4,
         "my_role": "Game Director & Gameplay Programmer",
         "technologies": ["Unreal Engine 5.4", "Blueprint"],
-        "description": "This 3D multiplayer action game was developed as a senior capstone project at Halla University’s Department of Computer Engineering. Inspired by Sekiro and Bloodborne, the game focuses on delivering fast-paced combat and an immersive, atmospheric world. Utilizing Unreal Engine 5, we implemented Nanite and Lumen to achieve high-quality visuals and designed real-time cooperative multiplayer functionality to support team-based gameplay.",
+        "description": "This 3D multiplayer action game was developed as a senior capstone project at University’s Department of Computer Engineering. Inspired by Sekiro and Bloodborne, the game focuses on delivering fast-paced combat and an immersive, atmospheric world. Utilizing Unreal Engine 5, we implemented Nanite and Lumen to achieve high-quality visuals and designed real-time cooperative multiplayer functionality to support team-based gameplay.",
         "videoUrl": "https://www.youtube.com/embed/264Wfi25UOU",
         "collaboration_details": {
             "team_size": 5,
