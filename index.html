@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3>CSH Portfolio</h3>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-video-container">
+                <div id="hero-youtube-player" class="hero-video" data-video-id="264Wfi25UOU"></div>
+                <div class="hero-video-overlay"></div>
+                <div class="fallback-background"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-name">
+                    <span id="typingText"></span><span id="typingCursor" class="typing-cursor">|</span>
+                </h1>
+                <p class="hero-subtitle">Game Developer</p>
+                <p class="hero-description">
+                    C++ frontend/backend development and Unreal Engine specialist
+                </p>
+                <div class="hero-contact">
+                    <a href="https://www.linkedin.com/in/haxxorbunny/" target="_blank" class="contact-link">
+                        <span class="contact-icon">💼</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:sprtms9062@gmail.com" class="contact-link">
+                        <span class="contact-icon">✉️</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://github.com/HaXX0rBunny" target="_blank" class="contact-link">
+                        <span class="contact-icon">👾</span>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge expert">C++</span>
+                            <span class="tech-badge advanced">C</span>
+                            <span class="tech-badge">C#</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Game Engines</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge expert">Unreal Engine 4/5</span>
+                            <span class="tech-badge advanced">Unity</span>
+                            <span class="tech-badge expert">Custom Engines</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Graphics & Rendering</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge expert">OpenGL</span>
+                            <span class="tech-badge">DirectX</span>
+                            <span class="tech-badge">Vulkan</span>
+                            <span class="tech-badge advanced">Shader Programming</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Development Tools</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge expert">Git</span>
+                            <span class="tech-badge">Perforce</span>
+                            <span class="tech-badge expert">Visual Studio</span>
+                            <span class="tech-badge">Rider</span>
+                            <span class="tech-badge">Blender</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-section">
+                    <h3 class="section-title">Education</h3>
+                    <div class="education-card">
+                        <h4>Bachelor of Computer Science and Engineering</h4>
+                        <p>Gyeongsang National University (2016-2023)</p>
+                        <h4>Intensive C++-Oriented Game Development Program</h4>
+                        <p>DigiPen Game Academy (2024-2025)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always interested in discussing new opportunities, innovative projects, and collaborating with fellow game developers.</p>
+                        <div class="contact-links">
+                            <a href="mailto:sprtms9062@gmail.com" class="contact-link">
+                                <span class="contact-icon">✉️</span>
+                                <span>sprtms9062@gmail.com</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/haxxorbunny/" target="_blank" class="contact-link">
+                                <span class="contact-icon">💼</span>
+                                <span>LinkedIn Profile</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="breadcrumb">
+                    <a href="#projects" class="breadcrumb-link" id="modalBreadcrumb">Projects</a>
+                    <span> / </span>
+                    <span id="modalTitle">Project Details</span>
+                </div>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tabs">
+                    <div class="tab-navigation">
+                        <button class="tab-btn active" data-tab="overview">Overview</button>
+                        <button class="tab-btn" data-tab="collaboration" id="collaborationTab">Team & Collaboration</button>
+                        <button class="tab-btn" data-tab="technical">Technical Details</button>
+                        <button class="tab-btn" data-tab="challenges">Challenges & Solutions</button>
+                        <button class="tab-btn" data-tab="timeline">Timeline</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- Overview Tab -->
+                        <div class="tab-pane active" id="overviewTab">
+                            <div class="project-detail-video" id="modalVideo">
+                                <!-- Video will be inserted here -->
+                            </div>
+                            <div class="project-detail-section">
+                                <h3>Project Overview</h3>
+                                <p id="modalDescription"></p>
+                                <div class="project-meta">
+                                    <div class="project-type-badge" id="projectTypeBadge"></div>
+                                    <div class="role-info" id="roleInfo"></div>
+                                </div>
+                                <div class="tech-stack" id="modalTechStack"></div>
+                                <div class="download-section" id="downloadSection"></div>
+                            </div>
+                        </div>
+
+                        <!-- Team & Collaboration Tab -->
+                        <div class="tab-pane" id="collaborationTab-content">
+                            <div class="collaboration-content">
+                                <!-- Content will be dynamically inserted -->
+                            </div>
+                        </div>
+
+                        <!-- Technical Details Tab -->
+                        <div class="tab-pane" id="technicalTab">
+                            <div class="technical-content">
+                                <div class="project-detail-section">
+                                    <h3>Technical Challenges</h3>
+                                    <ul id="technicalChallenges"></ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Challenges & Solutions Tab -->
+                        <div class="tab-pane" id="challengesTab">
+                            <div class="challenges-content">
+                                <!-- Troubleshooting content will be inserted here -->
+                            </div>
+                        </div>
+
+                        <!-- Timeline Tab -->
+                        <div class="tab-pane" id="timelineTab">
+                            <div class="timeline-content">
+                                <!-- Timeline content will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- YouTube API Script -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="app.js"></script>
+</body>
+</html>
