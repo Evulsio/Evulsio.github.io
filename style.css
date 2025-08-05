@@ -81,14 +81,14 @@ canvas#heroCanvas {
 /* 공통 섹션 */
 section {
   padding: 6rem 2rem;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
 }
 
 /* About */
 #about {
   background-color: #111;
+  text-align: center;
 }
 
 #about h2 {
@@ -110,26 +110,24 @@ section {
 #projects h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .project-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  align-items: center;
 }
 
 .project-card {
   background-color: #1a1a1a;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 600px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px);
 }
 
 .project-card h3 {
@@ -141,48 +139,10 @@ section {
   color: #aaa;
 }
 
-/* Awards */
-.awards-list {
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.awards-list li {
-  margin-bottom: 0.75rem;
-  color: #ccc;
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.awards-list li::before {
-  content: "🏆";
-  position: absolute;
-  left: 0;
-}
-
-/* Experiences */
-.experience-list {
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.experience-list li {
-  margin-bottom: 1rem;
-}
-
-.experience-list li strong {
-  color: #fff;
-}
-
 /* Contact */
 #contact {
   background-color: #111;
+  text-align: center;
 }
 
 #contact h2 {
