@@ -18,39 +18,32 @@ a:hover {
   color: #00ddff;
 }
 
-/* 헤더 전체 정렬 */
+/* 헤더 */
 header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 1.5rem 2rem;
+  align-items: center;
+  padding: 1rem 2rem;
   background-color: #111;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-/* 좌측: 로고와 네비 */
-.nav-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
+header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
-/* 네비게이션 링크 흰색 + 밑줄 */
 nav ul {
   list-style: none;
   display: flex;
-  flex-direction: column; /* 수직 배치 */
-  gap: 0.3rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
 
 nav ul li a {
-  color: #fff !important;
-  text-decoration: underline;
   font-weight: bold;
 }
 
@@ -61,23 +54,6 @@ nav ul li a {
   height: 100vh;
   overflow: hidden;
   background: #000;
-}
-
-/* 우측: 이름 및 설명 */
-.header-info {
-  text-align: right;
-}
-
-.header-info h2 {
-  font-size: 1.2rem;
-  margin: 0;
-  font-weight: bold;
-}
-
-.header-info p {
-  font-size: 0.95rem;
-  margin: 0.2rem 0 0;
-  color: #ccc;
 }
 
 canvas#heroCanvas {
