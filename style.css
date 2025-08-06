@@ -1,24 +1,23 @@
-/* 기본 세팅 */
+/* 기본 설정 */
 body {
   margin: 0;
   font-family: 'Nanum Gothic', sans-serif;
   background: #000;
   color: #fff;
-  line-height: 1.6;
   font-size: 16px;
+  line-height: 1.6;
 }
 
 a {
   color: #00aaff;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 a:hover {
   color: #00ddff;
 }
 
-/* 고정 내비게이션 바 */
+/* 고정 상단 내비게이션 */
 header {
   position: fixed;
   top: 0;
@@ -31,9 +30,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  list-style: none;
   padding: 1rem 0;
   margin: 0;
-  list-style: none;
 }
 
 .menu li + li {
@@ -42,8 +41,8 @@ header {
 
 .menu a {
   color: #fff;
-  text-decoration: none;
   font-weight: bold;
+  font-size: 1.1rem;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
@@ -57,8 +56,8 @@ header {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: #000;
   overflow: hidden;
+  background: #000;
 }
 
 canvas#heroCanvas {
@@ -80,15 +79,35 @@ canvas#heroCanvas {
 }
 
 .intro h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #fff;
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 194, 255, 0.5);
+  letter-spacing: 2px;
   margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out forwards;
 }
 
 .intro p {
   font-size: 1.4rem;
   color: #ccc;
+  opacity: 0;
+  animation: fadeInUp 1.6s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* 섹션 공통 */
