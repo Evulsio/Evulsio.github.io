@@ -18,42 +18,47 @@ a:hover {
   color: #00ddff;
 }
 
-/* 헤더 */
+/* 고정 내비게이션 바 */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #111;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
+  width: 100%;
+  background-color: #000;
+  z-index: 1000;
 }
 
-header h1 {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
+.menu {
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
   margin: 0;
-  padding: 0;
+  list-style: none;
 }
 
-nav ul li a {
+.menu li + li {
+  margin-left: 2rem;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
   font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
-/* Hero 섹션 */
+.menu a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* 히어로 섹션 */
 #hero {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   background: #000;
+  overflow: hidden;
 }
 
 canvas#heroCanvas {
@@ -63,30 +68,32 @@ canvas#heroCanvas {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
-.hero-text {
+.intro {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 30%;
+  width: 100%;
   text-align: center;
+  z-index: 2;
 }
 
-.hero-text h2 {
+.intro h1 {
   font-size: 3.5rem;
-  margin-bottom: 1rem;
   font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
-.hero-text p {
-  font-size: 1.3rem;
+.intro p {
+  font-size: 1.4rem;
   color: #ccc;
 }
 
-/* 공통 섹션 */
+/* 섹션 공통 */
 section {
-  padding: 6rem 2rem;
+  padding: 8rem 2rem 6rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -185,14 +192,6 @@ section h2 {
   transform: translateY(-2px);
 }
 
-/* Footer */
-footer {
-  background-color: #000;
-  text-align: center;
-  padding: 2rem;
-  color: #666;
-  font-size: 0.9rem;
-}
 .contact-links {
   margin-top: 2rem;
   color: #ccc;
@@ -201,9 +200,17 @@ footer {
 
 .contact-links a {
   color: #00aaff;
-  text-decoration: none;
 }
 
 .contact-links a:hover {
   text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 0.9rem;
 }
