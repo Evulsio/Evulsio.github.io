@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eunseop Shim Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" />
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #00d4ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #00ffcc;
+    }
+
+    /* Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .menu a {
+      color: #fff;
+      font-weight: 500;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #00d4ff;
+    }
+
+    /* Hero Section */
+    #hero {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #heroCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .intro {
+      text-align: center;
+      z-index: 2;
+    }
+
+    .intro h1 {
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .intro p {
+      font-size: 1.5rem;
+      color: #b0b0b0;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0;
+      animation: fadeIn 1.8s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Section Styles */
+    section {
+      padding: 6rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #fff;
+    }
+
+    /* About Section */
+    #about {
+      background: #121212;
+      border-radius: 12px;
+      padding: 4rem 2rem;
+    }
+
+    #about p {
+      font-size: 1.1rem;
+      color: #b0b0b0;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #about ul {
+      list-style: none;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    #about ul li {
+      background: #1f1f1f;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: #00d4ff;
+    }
+
+    /* Projects Section */
+    #projects {
+      background: #0a0a0a;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: #1f1f1f;
+      padding: 2rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #333;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+    }
+
+    .project-card h3 {
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: #b0b0b0;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: #121212;
+      border-radius: 12px;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    #contact p {
+      font-size: 1.1rem;
+      color: #b0b0b0;
+      margin-bottom: 1rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    .contact-links a {
+      font-size: 1rem;
+      color: #00d4ff;
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .intro h1 {
+        font-size: 3rem;
+      }
+
+      .intro p {
+        font-size: 1.2rem;
+      }
+
+      .menu {
+        gap: 1rem;
+      }
+
+      .menu a {
+        font-size: 0.9rem;
+      }
+
+      section h2 {
+        font-size: 2rem;
+      }
+
+      .project-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="intro">
+      <h1>Eunseop Shim</h1>
+      <p>Game Developer | Web Developer | Halla University</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate game and web developer, currently a senior on leave from Halla University's Software Convergence Department. I specialize in creating engaging multiplayer games and efficient web applications, with a strong focus on game systems, networking, and performance optimization.
+    </p>
+    <ul>
+      <li>Unity (C#, GameSpark, PUN, Mirror)</li>
+      <li>Unreal Engine 5 (C++, Blueprint, PhysX)</li>
+      <li>React.js (Redux, Electron, Bootstrap)</li>
+      <li>Firebase (Firestore, Edge Functions)</li>
+      <li>Python (Selenium, pyautogui, OpenCV)</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Multiplayer Game Development</h3>
+        <p>Developed online/LAN multiplayer games using Photon for Unity and Mirror. Contributed to vis2k/Mirror open-source project, focusing on assembly separation and editor tool development.</p>
+      </div>
+      <div class="project-card">
+        <h3>PhysX Performance Optimization</h3>
+        <p>Researched and implemented performance improvements for complex physics scenes in Unreal Engine 5, integrating PhysX 3.4 and automating test/performance metric collection.</p>
+      </div>
+      <div class="project-card">
+        <h3>Educational Website Development</h3>
+        <p>Built a full-stack educational website using SvelteKit and Firebase, handling community backend with Firestore and Edge Functions, and frontend with React.js for a shopping mall management solution.</p>
+      </div>
+      <div class="project-card">
+        <h3>Automation Tools</h3>
+        <p>Created Python-based automation tools using Selenium, pyautogui, and OpenCV for task automation and image recognition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Eunseop Shim<br>Halla University, Software Convergence Department (On Leave)<br>Email: <a href="mailto:lumeriith@gmail.com">lumeriith@gmail.com</a></p>
+    <div class="contact-links">
+      <a href="mailto:lumeriith@gmail.com">lumeriith@gmail.com</a>
+      <a href="https://github.com/your-github" target="_blank">GitHub Profile</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Eunseop Shim. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r155/three.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof THREE === 'undefined') {
+        console.error('Three.js failed to load. Please check the network or CDN availability.');
+        return;
+      }
+
+      // Starry background using Three.js
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('heroCanvas'), alpha: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      const stars = new THREE.Group();
+      for (let i = 0; i < 1000; i++) {
+        const geometry = new THREE.SphereGeometry(0.1, 16, 16);
+        const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+        const star = new THREE.Mesh(geometry, material);
+        star.position.set(
+          (Math.random() - 0.5) * 2000,
+          (Math.random() - 0.5) * 2000,
+          (Math.random() - 0.5) * 2000
+        );
+        stars.add(star);
+      }
+      scene.add(stars);
+
+      camera.position.z = 100;
+
+      function animate() {
+        requestAnimationFrame(animate);
+        stars.rotation.y += 0.0005;
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      // GSAP Scroll Animations
+      gsap.utils.toArray('.project-card').forEach(card => {
+        gsap.from(card, {
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reset'
+          }
+        });
+      });
+
+      // Responsive canvas
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    });
+  </script>
+</body>
+</html>
