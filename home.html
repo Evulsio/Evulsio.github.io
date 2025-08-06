@@ -132,48 +132,25 @@
       text-align: center;
       margin-bottom: 3rem;
       color: #fff;
+      text-transform: capitalize;
     }
 
-    /* About Section */
-    #about {
+    /* Projects Section */
+    #projects {
       background: #121212;
       border-radius: 12px;
       padding: 4rem 2rem;
     }
 
-    #about p {
-      font-size: 1.1rem;
-      color: #b0b0b0;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    #about ul {
-      list-style: none;
-      margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    #about ul li {
-      background: #1f1f1f;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
+    #projects h2 {
       color: #00d4ff;
-    }
-
-    /* Projects Section */
-    #projects {
-      background: #0a0a0a;
+      font-size: 3rem;
+      margin-bottom: 2rem;
     }
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: 1fr;
       gap: 2rem;
     }
 
@@ -199,6 +176,126 @@
     .project-card p {
       font-size: 1rem;
       color: #b0b0b0;
+    }
+
+    /* Experiences Section */
+    #experiences {
+      background: #121212;
+      border-radius: 12px;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    #experiences h2 {
+      color: #ff6200;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .experience-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .experience-item {
+      padding: 1.5rem;
+      width: 300px;
+      text-align: center;
+    }
+
+    .experience-item h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .experience-item p {
+      font-size: 0.9rem;
+      color: #b0b0b0;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .experience-item .tech-list {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #00d4ff;
+      text-align: center;
+    }
+
+    /* Awards Section */
+    #awards {
+      background: #121212;
+      border-radius: 12px;
+      padding: 4rem 2rem;
+    }
+
+    #awards h2 {
+      color: #ffaa00;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .award-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .award-item {
+      width: 100%;
+      text-align: center;
+    }
+
+    .award-item h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .award-item p {
+      font-size: 0.9rem;
+      color: #b0b0b0;
+      line-height: 1.4;
+    }
+
+    /* Career Section */
+    #career {
+      background: #121212;
+      border-radius: 12px;
+      padding: 4rem 2rem;
+    }
+
+    #career h2 {
+      color: #4CAF50;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .career-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .career-item {
+      width: 100%;
+      text-align: center;
+    }
+
+    .career-item h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .career-item p {
+      font-size: 0.9rem;
+      color: #b0b0b0;
+      line-height: 1.4;
     }
 
     /* Contact Section */
@@ -258,8 +355,8 @@
         font-size: 2rem;
       }
 
-      .project-card {
-        padding: 1.5rem;
+      .experience-item {
+        width: 100%;
       }
     }
   </style>
@@ -270,8 +367,10 @@
     <nav>
       <ul class="menu">
         <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#career">Career</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -286,21 +385,9 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>소개</h2>
-    <p>
-      저는 한라대학교 소프트웨어융합학과 4학년 재학생으로, 열정적인 게임 개발자입니다. Unity와 Unreal Engine 5를 통한 게임 개발과 제작에 강점을 가지고 있으며, 게임 시스템, 성능 최적화에 특히 집중하고 있습니다.
-    </p>
-    <ul>
-      <li>Unity (C#, VFX, PUN, Mirror)</li>
-      <li>Unreal Engine 5 (C++, Blueprint, PhysX)</li>
-    </ul>
-  </section>
-
   <!-- Projects Section -->
   <section id="projects">
-    <h2>프로젝트</h2>
+    <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
         <h3>멀티플레이어 게임 개발</h3>
@@ -317,6 +404,73 @@
       <div class="project-card">
         <h3>자동화 도구</h3>
         <p>Selenium, pyautogui, OpenCV를 활용해 작업 자동화 및 이미지 인식을 위한 Python 기반 자동화 도구를 개발했습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiences Section -->
+  <section id="experiences">
+    <h2>Experiences</h2>
+    <div class="experience-group">
+      <div class="experience-item">
+        <h3>Unity</h3>
+        <p>C#, GameSpark, PUN, Mirror<br>Online/LAN multiplayer experience with Photon For Unity, Mirror<br>Contributed to vis2k/Mirror (Assembly Separation, Editor Tool Development, etc)</p>
+        <div class="tech-list">C#</div>
+      </div>
+      <div class="experience-item">
+        <h3>Unreal Engine 5</h3>
+        <p>C++, Blueprint, PhysX<br>Experience with complex scene optimization<br>PhysX 3.4 integration</p>
+        <div class="tech-list">C++</div>
+      </div>
+      <div class="experience-item">
+        <h3>Svelte</h3>
+        <p>SvelteKit, TailwindCSS, Vercel<br>Full-stack web development experience<br>Deployed on Vercel</p>
+        <div class="tech-list">JavaScript</div>
+      </div>
+      <div class="experience-item">
+        <h3>Firebase</h3>
+        <p>Firestore, Edge Functions<br>Community backend with Firestore<br>Edge Functions integration</p>
+        <div class="tech-list">JavaScript</div>
+      </div>
+      <div class="experience-item">
+        <h3>React.js</h3>
+        <p>Redux, Electron, Bootstrap<br>Frontend development experience<br>Shopping mall management solution</p>
+        <div class="tech-list">JavaScript</div>
+      </div>
+      <div class="experience-item">
+        <h3>Python</h3>
+        <p>Selenium, pyautogui, OpenCV<br>Automation and image recognition tools<br>Task automation experience</p>
+        <div class="tech-list">Python</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards Section -->
+  <section id="awards">
+    <h2>Awards</h2>
+    <div class="award-list">
+      <div class="award-item">
+        <h3>Best game design 2023</h3>
+        <p>Awarded for innovative multiplayer game design at Halla University Game Jam.</p>
+      </div>
+      <div class="award-item">
+        <h3>Excellence in coding 2024</h3>
+        <p>Recognized for outstanding contributions to open-source projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Section -->
+  <section id="career">
+    <h2>Career</h2>
+    <div class="career-list">
+      <div class="career-item">
+        <h3>Game developer intern</h3>
+        <p>Worked at GameSpark, focusing on Unity multiplayer solutions, June 2024 - August 2024.</p>
+      </div>
+      <div class="career-item">
+        <h3>Freelance web developer</h3>
+        <p>Developed Svelte and React-based websites, January 2025 - Present.</p>
       </div>
     </div>
   </section>
@@ -377,7 +531,7 @@
       animate();
 
       // GSAP Scroll Animations
-      gsap.utils.toArray('.project-card').forEach(card => {
+      gsap.utils.toArray('.project-card, .experience-item, .award-item, .career-item').forEach(card => {
         gsap.from(card, {
           opacity: 0,
           y: 50,
