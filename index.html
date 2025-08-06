@@ -2,17 +2,16 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>IMLU Clone</title>
+  <title>BSH Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 헤더 -->
+  <!-- 고정 내비게이션 -->
   <header>
-    <h1>BSH</h1>
     <nav>
-      <ul>
+      <ul class="menu">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -24,8 +23,8 @@
   <!-- 히어로 섹션 -->
   <section id="hero">
     <canvas id="heroCanvas"></canvas>
-    <div class="hero-text">
-      <h2>Bang SungHyeon</h2>
+    <div class="intro">
+      <h1>Bang SungHyeon</h1>
       <p>Game Programmer Portfolio</p>
     </div>
   </section>
@@ -59,28 +58,27 @@
   </section>
 
   <!-- 연락처 섹션 -->
-<section id="contact">
-  <h2>Contact</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
 
-  <!-- 직접 링크 영역 -->
-  <div class="contact-links">
-    <p>Email: <a href="mailto:qkd724@gmail.com">qkd724@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Evulsio" target="_blank">github.com/Evulsio</a></p>
-  </div>
-</section>
+    <div class="contact-links">
+      <p>Email: <a href="mailto:qkd724@gmail.com">qkd724@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/Evulsio" target="_blank">github.com/Evulsio</a></p>
+    </div>
+  </section>
 
   <!-- 푸터 -->
   <footer>
-    <p>&copy; 2025 IMLU. All rights reserved.</p>
+    <p>&copy; 2025 BSH. All rights reserved.</p>
   </footer>
 
-  <!-- JS 파일 -->
+  <!-- 스크립트 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r155/three.min.js"></script>
