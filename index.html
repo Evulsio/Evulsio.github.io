@@ -144,7 +144,7 @@
     }
 
     #projects h2 {
-      color: #00d4ff;
+      color: #1E90FF;
       font-size: 3rem;
       margin-bottom: 2rem;
     }
@@ -160,18 +160,34 @@
       gap: 2rem;
       margin-bottom: 2rem;
       cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .project-item:hover .project-description h3 {
+      color: var(--hover-color, #1E90FF);
+    }
+
+    .project-item:hover .project-image {
+      border: 2px solid var(--hover-color, #1E90FF);
+    }
+
+    .project-item .project-description h3 {
+      color: #808080;
+      transition: color 0.3s ease;
     }
 
     .project-image {
       flex: 0 0 150px;
       height: 150px;
       overflow: hidden;
+      position: relative;
     }
 
     .project-image img {
       width: 150px;
       height: 150px;
       object-fit: cover;
+      transition: transform 0.3s ease;
     }
 
     .project-description {
@@ -181,7 +197,6 @@
 
     .project-description h3 {
       font-size: 1.6rem;
-      color: #fff;
       margin-bottom: 1rem;
     }
 
@@ -231,7 +246,7 @@
     .experience-item .tech-list {
       margin-top: 1rem;
       font-size: 0.85rem;
-      color: #00d4ff;
+      color: #1E90FF;
       text-align: center;
     }
 
@@ -334,7 +349,7 @@
 
     .contact-links a {
       font-size: 1rem;
-      color: #00d4ff;
+      color: #1E90FF;
     }
 
     /* Footer */
@@ -385,7 +400,7 @@
 
     .modal-content .tech-list {
       font-size: 0.9rem;
-      color: #00d4ff;
+      color: #1E90FF;
       margin-bottom: 1rem;
     }
 
@@ -399,7 +414,7 @@
     }
 
     .close:hover {
-      color: #00d4ff;
+      color: #1E90FF;
     }
   </style>
 </head>
@@ -431,7 +446,7 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-grid">
-      <div class="project-item" data-modal="modal1">
+      <div class="project-item" data-modal="modal1" data-hover-color="#1E90FF">
         <div class="project-image">
           <img src="path/to/your/image1.jpg" alt="Project Image 1">
         </div>
@@ -440,7 +455,7 @@
           <p>Photon for Unity와 Mirror를 사용해 온라인/LAN 멀티플레이어 게임을 개발했습니다.</p>
         </div>
       </div>
-      <div class="project-item" data-modal="modal2">
+      <div class="project-item" data-modal="modal2" data-hover-color="#FFA500">
         <div class="project-image">
           <img src="path/to/your/image2.jpg" alt="Project Image 2">
         </div>
@@ -449,7 +464,7 @@
           <p>Unreal Engine 5에서 복잡한 물리 장면의 성능 향상을 연구하고 구현했습니다.</p>
         </div>
       </div>
-      <div class="project-item" data-modal="modal3">
+      <div class="project-item" data-modal="modal3" data-hover-color="#FFD700">
         <div class="project-image">
           <img src="path/to/your/image3.jpg" alt="Project Image 3">
         </div>
@@ -458,7 +473,7 @@
           <p>SvelteKit과 Firebase를 사용해 풀스택 교육 웹사이트를 구축했습니다.</p>
         </div>
       </div>
-      <div class="project-item" data-modal="modal4">
+      <div class="project-item" data-modal="modal4" data-hover-color="#32CD32">
         <div class="project-image">
           <img src="path/to/your/image4.jpg" alt="Project Image 4">
         </div>
