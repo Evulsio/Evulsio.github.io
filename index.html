@@ -159,6 +159,7 @@
       align-items: center;
       gap: 2rem;
       margin-bottom: 2rem;
+      cursor: pointer;
     }
 
     .project-image {
@@ -346,6 +347,60 @@
       width: 1200px;
       margin: 0 auto;
     }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1001;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #1f1f1f;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      color: #e0e0e0;
+    }
+
+    .modal-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .modal-content p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content .tech-list {
+      font-size: 0.9rem;
+      color: #00d4ff;
+      margin-bottom: 1rem;
+    }
+
+    .close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #00d4ff;
+    }
   </style>
 </head>
 <body>
@@ -376,31 +431,40 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-grid">
-      <div class="project-item">
+      <div class="project-item" data-modal="modal1">
         <div class="project-image">
           <img src="path/to/your/image1.jpg" alt="Project Image 1">
         </div>
         <div class="project-description">
           <h3>멀티플레이어 게임 개발</h3>
-          <p>Unreal Engine 5를 활용한 동양풍 소울라이크류 게임 제작.</p>
+          <p>Photon for Unity와 Mirror를 사용해 온라인/LAN 멀티플레이어 게임을 개발했습니다.</p>
         </div>
       </div>
-      <div class="project-item">
+      <div class="project-item" data-modal="modal2">
         <div class="project-image">
           <img src="path/to/your/image2.jpg" alt="Project Image 2">
         </div>
         <div class="project-description">
-          <h3>3DOF 모션 시뮬레이터 개발  최적화</h3>
-          <p>Unity에서 3DOF 모션 시뮬레이터의 효율적인 개발 방법에 대한 연구를 진행하였습니다.</p>
+          <h3>PhysX 성능 최적화</h3>
+          <p>Unreal Engine 5에서 복잡한 물리 장면의 성능 향상을 연구하고 구현했습니다.</p>
         </div>
       </div>
-      <div class="project-item">
+      <div class="project-item" data-modal="modal3">
         <div class="project-image">
           <img src="path/to/your/image3.jpg" alt="Project Image 3">
         </div>
         <div class="project-description">
           <h3>교육 웹사이트 개발</h3>
-          <p>SvelteKit과 Firebase를 사용해 풀스택 교육 웹사이트를 구축했습니다. Firestore와 Edge Functions로 커뮤니티 백엔드를 처리하고, React.js로 쇼핑몰 관리 솔루션 프론트엔드를 개발했습니다.</p>
+          <p>SvelteKit과 Firebase를 사용해 풀스택 교육 웹사이트를 구축했습니다.</p>
+        </div>
+      </div>
+      <div class="project-item" data-modal="modal4">
+        <div class="project-image">
+          <img src="path/to/your/image4.jpg" alt="Project Image 4">
+        </div>
+        <div class="project-description">
+          <h3>자동화 도구</h3>
+          <p>Selenium, pyautogui, OpenCV를 활용해 작업 자동화 도구를 개발했습니다.</p>
         </div>
       </div>
     </div>
@@ -468,6 +532,43 @@
     <p>&copy; 2025 SungHyeon Bang. All rights reserved.</p>
   </footer>
 
+  <!-- Modal -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>멀티플레이어 게임 개발</h3>
+      <p>Photon for Unity와 Mirror를 사용해 온라인/LAN 멀티플레이어 게임을 개발했습니다. vis2k/Mirror 오픈소스 프로젝트에 기여하며 어셈블리 분리 및 에디터 도구 개발에 참여했습니다. 이 프로젝트는 실시간 협업과 네트워크 최적화를 목표로 했습니다.</p>
+      <div class="tech-list">C#, Photon, Mirror</div>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>PhysX 성능 최적화</h3>
+      <p>Unreal Engine 5에서 복잡한 물리 장면의 성능 향상을 연구하고 구현했습니다. PhysX 3.4를 통합하고 테스트/성능 지표 수집을 자동화했습니다. 고급 물리 시뮬레이션과 최적화 기술을 적용했습니다.</p>
+      <div class="tech-list">C++, Blueprint, PhysX</div>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>교육 웹사이트 개발</h3>
+      <p>SvelteKit과 Firebase를 사용해 풀스택 교육 웹사이트를 구축했습니다. Firestore와 Edge Functions로 커뮤니티 백엔드를 처리하고, React.js로 쇼핑몰 관리 솔루션 프론트엔드를 개발했습니다. 사용자 경험을 개선하기 위한 인터랙티브 기능이 포함되었습니다.</p>
+      <div class="tech-list">SvelteKit, Firebase, React.js</div>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>자동화 도구</h3>
+      <p>Selenium, pyautogui, OpenCV를 활용해 작업 자동화 및 이미지 인식을 위한 Python 기반 자동화 도구를 개발했습니다. 반복적인 작업을 효율적으로 처리하기 위한 맞춤형 솔루션을 제공했습니다.</p>
+      <div class="tech-list">Python, Selenium, OpenCV</div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
@@ -528,6 +629,31 @@
         renderer.setSize(1200, window.innerHeight);
         camera.aspect = 1200 / window.innerHeight;
         camera.updateProjectionMatrix();
+      });
+
+      // Modal Functionality
+      const modals = document.querySelectorAll('.modal');
+      const projectItems = document.querySelectorAll('.project-item');
+
+      projectItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const modalId = item.getAttribute('data-modal');
+          const modal = document.getElementById(modalId);
+          modal.style.display = 'flex';
+        });
+      });
+
+      modals.forEach(modal => {
+        const closeBtn = modal.querySelector('.close');
+        closeBtn.addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
       });
     });
   </script>
