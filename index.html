@@ -669,13 +669,12 @@
         });
       });
 
-      // Modal Functionality with Animation
-      const modals = document.querySelectorAll('.modal');
-      const projectItems = document.querySelectorAll('.project-item');
-
-      projectItems.forEach(item => {
-        item.addEventListener('click', () => {
-          console.log('Clicked item:', item); // 디버깅 로그
+      // Modal Functionality with Event Delegation
+      const projectGrid = document.querySelector('.project-grid');
+      projectGrid.addEventListener('click', (e) => {
+        const item = e.target.closest('.project-item');
+        if (item) {
+          console.log('Clicked item:', item);
           const modalId = item.getAttribute('data-modal');
           const modal = document.getElementById(modalId);
           if (modal) {
@@ -684,21 +683,29 @@
           } else {
             console.error('Modal not found for ID:', modalId);
           }
-        });
+        }
       });
 
+      // Close Modal Functionality
+      const modals = document.querySelectorAll('.modal');
       modals.forEach(modal => {
         const closeBtn = modal.querySelector('.close');
         closeBtn.addEventListener('click', () => {
+          console.log('Closing modal:', modal.id);
           gsap.to(modal, { opacity: 0, scale: 0.9, duration: 0.3, ease: "power2.out", onComplete: () => {
             modal.style.display = 'none';
+            modal.style.opacity = '1'; // 초기화
+            modal.style.transform = 'scale(1)'; // 초기화
           }});
         });
 
         modal.addEventListener('click', (e) => {
           if (e.target === modal) {
+            console.log('Closing modal by background click:', modal.id);
             gsap.to(modal, { opacity: 0, scale: 0.9, duration: 0.3, ease: "power2.out", onComplete: () => {
               modal.style.display = 'none';
+              modal.style.opacity = '1'; // 초기화
+              modal.style.transform = 'scale(1)'; // 초기화
             }});
           }
         });
