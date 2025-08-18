@@ -153,7 +153,9 @@
     }
 
     .project-grid {
-      display: block;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       padding: 0 2rem;
     }
 
@@ -164,6 +166,8 @@
       margin-bottom: 2rem;
       cursor: pointer;
       transition: all 0.3s ease;
+      width: 100%;
+      max-width: 1000px;
     }
 
     .project-item:hover .project-description h3 {
@@ -444,7 +448,7 @@
         <li><a href="#hero">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experiences">Experiences</a></li>
-        <li><a href="#awards">Achievements</a></li>
+        <li><a href="#awards">Activities</a></li>
         <li><a href="#career">Career</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -533,7 +537,7 @@
         <p>VR 어트랙션 게임을 위한 3축 모션시뮬레이터 개발 방법론 작성 및 참가</p>
       </div>
       <div class="award-item">
-        <h3>S/W 한라인재페스티벌 2024</h3><p>HL그룹 주최</p>
+        <h3>S/W 한라인재패스티벌 2024</h3><p>HL그룹 주최</p>
         <p>최우수상 수상</p>
       </div>
       <div class="award-item">
@@ -677,11 +681,12 @@
           opacity: 0,
           y: 50,
           duration: 1,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: card,
             start: 'top 80%',
             end: 'bottom 20%',
-            toggleActions: 'play none none reset'
+            toggleActions: 'play reverse play reverse'
           }
         });
       });
@@ -711,8 +716,8 @@
           console.log('Closing modal:', modal.id);
           gsap.to(modal, { opacity: 0, scale: 0.9, duration: 0.3, ease: "power2.out", onComplete: () => {
             modal.style.display = 'none';
-            modal.style.opacity = '1'; // 초기화
-            modal.style.transform = 'scale(1)'; // 초기화
+            modal.style.opacity = '1';
+            modal.style.transform = 'scale(1)';
           }});
         });
 
@@ -721,8 +726,8 @@
             console.log('Closing modal by background click:', modal.id);
             gsap.to(modal, { opacity: 0, scale: 0.9, duration: 0.3, ease: "power2.out", onComplete: () => {
               modal.style.display = 'none';
-              modal.style.opacity = '1'; // 초기화
-              modal.style.transform = 'scale(1)'; // 초기화
+              modal.style.opacity = '1';
+              modal.style.transform = 'scale(1)';
             }});
           }
         });
